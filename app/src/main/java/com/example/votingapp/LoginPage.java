@@ -10,32 +10,14 @@ import android.view.View;
 import android.widget.Button;
 
 public class LoginPage extends AppCompatActivity{
-    Button button;
-    Intent intent;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
-        getSupportActionBar().hide();
-        button =findViewById(signin);
-        button.setOnClickListener(this::click);
 
-
-
-    }
-
-    public void click(View view) {
+    public View.OnClickListener click(){
         Intent intent = new Intent(this, Verification_page.class);
 
-       startActivity(intent);
+        startActivity(intent);
+
+        return null;
     }
-//    public View.OnClickListener click(){
-//        Intent intent = new Intent(this, Verification_page.class);
-//
-//        startActivity(intent);
-//
-//        return null;
-//    }
 
 
 
